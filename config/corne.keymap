@@ -33,8 +33,8 @@
 //                    | GUI |     | SPC |   | ENT |     | SHFT|
                         bindings = <
    &bt BT_CLR &bt BT_SEL 1 &bt BT_SEL 2 &kp UP    &C_PREV    &C_FF         &kp FSLH  &kp N7   &kp N8   &kp N9   &kp STAR &kp DEL
-   &kp CAPS   &trans       &kp LEFT     &kp DOWN  &kp RIGHT  &C_PP         &kp MINUS &kp N2   &kp N5   &kp N6   &KP_PLUS &kp RET
-   &kp LCTRL  &trans       &trans       &C_MUTE   &C_VOL_DN  &C_VOL_UP     &kp N0    &kp N1   &kp N2   &kp N3   &KP_DOT  &KP_EQUAL
+   &kp CAPS   &trans       &kp LEFT     &kp DOWN  &kp RIGHT  &C_PP         &kp MINUS &kp N2   &kp N5   &kp N6   &kp PLUS &kp RET
+   &kp LCTRL  &trans       &trans       &C_MUTE   &C_VOL_DN  &C_VOL_UP     &kp N0    &kp N1   &kp N2   &kp N3   &kp DOT  &kp EQUAL
                                         &kp LGUI  &trans     &kp SPACE     &kp RET   &trans   &kp RSHFT
                         >;
                 };
