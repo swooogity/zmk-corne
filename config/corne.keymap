@@ -14,7 +14,6 @@
         combo_esc {
             timeout-ms = <50>;
             key-positions = <1 2>;
-            layers = <0>;
             bindings = <&kp ESC>;
         };
     };
@@ -39,7 +38,7 @@
 // -----------------------------------------------------------------------------------------
 // |      | ESC | MUTE| UP  |     | TSK |   |  (  |  )  |     |     |     |     |  
 // |      | VUP | LFT | DWN | RGT |PG UP|   |  [  |  ]  |     |     |     |     |  
-// |      |VDOWN| RWD | PP  | NXT |PG DN|   |  {  |  }  |     |     |     |     |  
+// |      |VDOWN| RWD | PP  | NXT |PG DN|   |  {  |  }  |     |     |     |     |
 //                    |     |     |     |   |     |     |     |
                         bindings = <
    &none  &kp ESC       &kp C_MUTE  &kp UP    &none       &kp C_AL_TASK_MANAGER     &kp LPAR  &kp RPAR  &none  &none  &none  &none                 
