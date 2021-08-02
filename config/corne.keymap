@@ -18,14 +18,23 @@
         };
     };
     
+    combos {
+        compatible = "zmk,combos";
+        combo_lt3 {
+            timeout-ms = <50>;
+            key-positions = <37 40>;
+            bindings = <&mo 3>;
+        };
+    };
+    
         keymap {
                 compatible = "zmk,keymap";
 
                 default_layer {
 // -----------------------------------------------------------------------------------------
-// |      |Q,ESC|W,ESC|  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |      |
-// |      |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |      |
-// |      |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  | /?  |      |
+// |      |Q,ESC|W,ESC|  E  |  R  |  T  |   |  Y  |  U  |  I  |  O  |  P  |      |
+// |      |  A  |  S  |  D  |  F  |  G  |   |  H  |  J  |  K  |  L  |  ;  |      |
+// |      |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M  |  ,  |  .  | /?  |      |
 //         | GUI | TAB/LOWER | CTRL/SPC |   | BSP/SHFT | DEL/RAISE |ENT/ALT|
                         bindings = <
    &none &kp Q &kp W &kp E &kp R &kp T     &kp Y &kp U  &kp I     &kp O   &kp P    &none
@@ -36,30 +45,45 @@
                 };
                 lower_layer {
 // -----------------------------------------------------------------------------------------
-// |      | ESC | MUTE| UP  |     | TSK |   |  (  |  )  |     |     |     |     |  
-// |      | VUP | LFT | DWN | RGT |PG UP|   |  [  |  ]  |     |     |     |     |  
-// |      |VDOWN| RWD | PP  | NXT |PG DN|   |  {  |  }  |     |     |     |     |
+// |      | VUP | END | UP  |HOME | TSK |   |  (  |  )  |     |     |BTCLR|     |  
+// |      |VDOWN| LFT | DWN | RGT |PG UP|   |  [  |  ]  |     |     | BT1 |     |  
+// |      |MUTE | RWD | PP  | NXT |PG DN|   |  {  |  }  |     |     | BT2 |     |
 //                    |     |     |     |   |     |     |     |
                         bindings = <
-   &none  &kp ESC       &kp C_MUTE  &kp UP    &none       &kp C_AL_TASK_MANAGER     &kp LPAR  &kp RPAR  &none  &none  &none  &none                 
-   &none  &kp C_VOL_UP  &kp LEFT    &kp DOWN  &kp RIGHT   &kp PG_UP     &kp LBKT  &kp RBKT  &none  &none  &none  &none
-   &none  &kp C_VOL_DN  &kp C_PREV  &kp C_PP  &kp C_NEXT  &kp PG_DN     &kp LBRC  &kp RBRC  &none  &none  &none  &none
-                                               &trans &trans &trans     &trans &trans  &trans
+   &none  &kp C_VOL_UP  &kp END     &kp UP    &kp HOME    &kp C_AL_TASK_MANAGER     &kp LPAR  &kp RPAR  &none  &none  &&bt BT_CLR  &none                 
+   &none  &kp C_VOL_DN  &kp LEFT    &kp DOWN  &kp RIGHT   &kp PG_UP     &kp LBKT  &kp RBKT  &none  &none  &bt BT_SEL 1  &none
+   &none  &kp kp C_MUTE &kp C_PREV  &kp C_PP  &kp C_NEXT  &kp PG_DN     &kp LBRC  &kp RBRC  &none  &none  &bt BT_SEL 2  &none
+                                              &trans &trans &trans     &trans &trans  &trans
                         >;
                 };
 
                 raise_layer {
 // -----------------------------------------------------------------------------------------
 // |      |  !  |  @  |  #  |  $  |  %  |   |  +  |  7  |  8  |  9  |  *  |     | 
-// |      |  ^  |  &  |  *  |  |  |  \  |   |  -  |  4  |  5  |  6  |  =  |     |
-// |      |  "  |  '  |  _  |  `  | CALC|   |  0  |  1  |  2  |  3  |  /  |     |
+// |      |  ^  |  &  |  *  |  |  |  \  |   |  -  |  4  |  5  |  6  |  /  |     |
+// |      |  "  |  '  |  _  |  `  | CALC|   |  0  |  1  |  2  |  3  |  =  |     |
 //                    |     |     |     |   |     |     |     |
                         bindings = <
    &none  &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT    &kp PLUS  &kp N7  &kp N8  &kp N9  &kp STAR  &none
-   &none  &kp CARET &kp AMPS  &kp STAR  &kp PIPE  &kp BSLH     &kp MINUS &kp N4  &kp N5  &kp N6  &kp EQUAL &none
-   &none  &kp DQT   &kp APOS  &kp UNDER &kp GRAVE &kp C_AL_CALC   &kp N0    &kp N1  &kp N2  &kp N3  &kp FSLH  &none
+   &none  &kp CARET &kp AMPS  &kp STAR  &kp PIPE  &kp BSLH     &kp MINUS &kp N4  &kp N5  &kp N6  &kp FSLH  &none
+   &none  &kp DQT   &kp APOS  &kp UNDER &kp GRAVE &kp C_AL_CALC   &kp N0    &kp N1  &kp N2  &kp N3  &kp EQUAL  &none
                                     &trans &trans &trans       &trans   &trans   &trans
                         >;
                 };
+                
+                adjust_layer {
+// -----------------------------------------------------------------------------------------
+// |      | F1  | F2  |  F3 | F4  | F5  |   | F6  | F7  |  F8 | F9  | F10 |     |
+// |      |     |     |     |     |     |   |     |     |     | F11 | F12 |     |
+// |      |     |     |     |     |     |   |     |     |     |     |     |     |
+//                     |     |     |    |   |     |     |     |
+                        bindings = <
+   &none &kp F1 &kp F2 &kp F3 &kp F4 &kp F5  &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &none
+   &none &none &none &none &none &none       &none &none &none &none &kp F11 &kp F12 &none 
+   &none &none &none &none &none &none       &none &none &none &none &none &none &none
+                &trans &trans &trans         &trans   &trans   &trans
+                        >;
+                };
+
         };
 };
