@@ -19,8 +19,8 @@
             timeout-ms = <50>;
             key-positions = <1 2>;
             bindings = <&kp ESC>;
+                >;
         };
-
         combo_lt3 {
             timeout-ms = <50>;
             key-positions = <37 40>;
