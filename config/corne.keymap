@@ -22,7 +22,7 @@
    &none &kp Q &kp W &kp E &kp R &kp T     &kp Y &kp U  &kp I     &kp O   &kp P    &none
    &none &kp A &kp S &kp D &kp F &kp G     &kp H &kp J  &kp K     &kp L   &kp SEMI &none
    &none &kp Z &kp X &kp C &kp V &kp B     &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &none
-   &kp LGUI  &lt 1 TAB  &mt LCTRL SPACE    &mt BSPC RSHFT &lt 2 DEL &mt RET RALT
+   &kp LGUI  &lt 1 TAB  &mt SPACE LCTRL    &mt RSHFT BSPC  &lt 2 DEL &mt RALT RET 
                         >;
                 };
                 lower_layer {
@@ -32,7 +32,7 @@
 // |      |VDOWN| RWD | PP  | NXT |PG DN|   |  {  |  }  |     |     |     |     |  
 //                    |     |     |     |   |     |     |     |
                         bindings = <
-   &none  &kp ESC       &kp C_MUTE  &kp UP    &none       &kp C_AL_TASK_MANAGER     &kp LPAR  &kp RPAR  &none  &none  &none  &none                 
+   &none  &kp ESC       &kp C_MUTE  &kp UP    &none       &C_AL_TASK_MANAGER     &kp LPAR  &kp RPAR  &none  &none  &none  &none                 
    &none  &kp C_VOL_UP  &kp LEFT    &kp DOWN  &kp RIGHT   &kp PG_UP     &kp LBKT  &kp RBKT  &none  &none  &none  &none
    &none  &kp C_VOL_DN  &kp C_PREV  &kp C_PP  &kp C_NEXT  &kp PG_DN     &kp LBRC  &kp RBRC  &none  &none  &none  &none
                                                &trans &trans &trans     &trans &trans  &trans
