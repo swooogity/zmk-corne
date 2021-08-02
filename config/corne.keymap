@@ -13,7 +13,8 @@
         compatible = "zmk,combos";
         combo_esc {
             timeout-ms = <50>;
-            key-positions = <0 1>;
+            key-positions = <1 2>;
+            layers = <0>;
             bindings = <&kp ESC>;
         };
     };
@@ -31,7 +32,7 @@
    &none &kp Q &kp W &kp E &kp R &kp T     &kp Y &kp U  &kp I     &kp O   &kp P    &none
    &none &kp A &kp S &kp D &kp F &kp G     &kp H &kp J  &kp K     &kp L   &kp SEMI &none
    &none &kp Z &kp X &kp C &kp V &kp B     &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &none
-   &kp LGUI  &lt 1 TAB  &mt SPACE LCTRL    &mt RSHFT BSPC  &lt 2 DEL &mt RALT RET 
+   &kp LGUI  &lt 1 TAB  &mt LCTRL SPACE   &mt RSHFT BSPC  &lt 2 DEL &mt RALT RET 
                         >;
                 };
                 lower_layer {
@@ -57,7 +58,7 @@
                         bindings = <
    &none  &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT    &kp PLUS  &kp N7  &kp N8  &kp N9  &kp STAR  &none
    &none  &kp CARET &kp AMPS  &kp STAR  &kp PIPE  &kp BSLH     &kp MINUS &kp N4  &kp N5  &kp N6  &kp EQUAL &none
-   &none  &kp DQT   &kp APOS  &kp UNDER &kp GRAVE &kp K_CALC   &kp N0    &kp N1  &kp N2  &kp N3  &kp FSLH  &none
+   &none  &kp DQT   &kp APOS  &kp UNDER &kp GRAVE &kp C_AL_CALC   &kp N0    &kp N1  &kp N2  &kp N3  &kp FSLH  &none
                                     &trans &trans &trans       &trans   &trans   &trans
                         >;
                 };
