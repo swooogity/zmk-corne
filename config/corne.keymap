@@ -65,7 +65,7 @@
                         bindings = <
                         
    &none  &kp EXCL  &kp AT    &kp HASH &kp DLLR &kp PRCNT        &kp CARET &kp AMPS  &kp STAR &kp LPAR &mt PSCRN RPAR &none
-   &none  &kp TILDE &kp GRAVE &none    &none    &kp C_AL_CALC    &kp MINUS &kp UNDE &kp FSLH &kp LBRC &kp RBRC &none
+   &none  &kp TILDE &kp GRAVE &none    &none    &kp C_AL_CALC    &kp MINUS &kp UNDER &kp FSLH &kp LBRC &kp RBRC &none
    &none  &none     &none     &none    &none    &none            &kp PLUS  &kp EQUAL &kp BSLH &kp LBKT &kp RBKT &none
                                       &trans &trans &trans       &trans &trans &trans
                         >;
