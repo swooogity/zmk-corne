@@ -34,7 +34,7 @@
 // |      |Q,ESC |W,ESC|  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |      |
 // |      |  A   |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |      |
 // |      |Z,SHFT|  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  | /?  |      |
-//           |GUI/DEL|CTRL/TAB|SPC/LOWER|   |BSP/RAISE|SHFT/CAPS|ENT/ALT|
+//            |GUI/DEL|CTRL/TAB|SPC/LOWER|   |BSP/RAISE|SHFT/CAPS|ENT/ALT|
                         bindings = <
    &none &kp Q       &kp W &kp E &kp R &kp T     &kp Y &kp U  &kp I     &kp O   &kp P    &none
    &none &kp A       &kp S &kp D &kp F &kp G     &kp H &kp J  &kp K     &kp L   &kp SEMI &none
@@ -45,13 +45,13 @@
                 lower_layer {
 // -----------------------------------------------------------------------------------------
 // |      |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |     |
-// |      | VUP | LFT | UP  | DWN | RGT |   |PG UP|     |  |  |     | ' " |     |  
-// |      | VDN |MUTE | RWD | PP  | NXT |   |PG DN| HOME|     |     | END |     |
+// |      | VUP | LFT | UP  | DWN | RGT |   |  -  |  _  |  /  |     | ' " |     |  
+// |      | VDN |MUTE | RWD | PP  | NXT |   |  +  |  =  |  \  |  .  |  |  |     |  
 //                    |     |     |     |   |     |     |     |
                         bindings = <
-   &none  &kp N1       &kp N2     &kp N3     &kp N4    &kp N5        &kp N6     &kp N7   &kp N8   &kp N9 &kp N0       &none                 
-   &none  &kp C_VOL_UP &kp LEFT   &kp UP     &kp DOWN  &kp RIGHT     &kp PG_UP  &none    &kp PIPE &none  &mt DQT APOS &none
-   &none  &kp C_VOL_DN &kp C_MUTE &kp C_PREV &kp C_PP  &kp C_NEXT    &kp PG_DN  &kp HOME &none    &none  &kp END      &none
+   &none  &kp N1       &kp N2     &kp N3     &kp N4    &kp N5        &kp N6     &kp N7   &kp N8   &kp N9 &kp N0           &none                 
+   &none  &kp C_VOL_UP &kp LEFT   &kp UP     &kp DOWN  &kp RIGHT     &kp MINUS &kp UNDER &kp FSLH &none  &mt DQT APOS &none
+   &none  &kp C_VOL_DN &kp C_MUTE &kp C_PREV &kp C_PP  &kp C_NEXT    &kp PLUS  &kp EQUAL &kp BSLH &trans  &kp PIPE     &none
                                             &trans &trans &trans     &trans &trans  &trans
                         >;
                 };
@@ -59,14 +59,14 @@
                 raise_layer {
 // -----------------------------------------------------------------------------------------
 // |      |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  | )PSCRN|     | 
-// |      |  ~  |  `  |     |     | CALC|   |  -  |  _  |  /  |  {  |   }   |     |
-// |      |     |     |     |     |     |   |  +  |  =  |  \  |  [  |   ]   |     |
+// |      |  ~  |  `  |     |     | CALC|   |     |     |     |  {  |   }   |     |
+// |      |     |     |     | END | HOME|   |     |     |     |  [  |   ]   |     |
 //                    |     |     |     |   |     |     |     |
                         bindings = <
                         
-   &none  &kp EXCL  &kp AT    &kp HASH &kp DLLR &kp PRCNT        &kp CARET &kp AMPS  &kp STAR &kp LPAR &mt PSCRN RPAR &none
-   &none  &kp TILDE &kp GRAVE &none    &none    &kp C_AL_CALC    &kp MINUS &kp UNDER &kp FSLH &kp LBRC &kp RBRC &none
-   &none  &none     &none     &none    &none    &none            &kp PLUS  &kp EQUAL &kp BSLH &kp LBKT &kp RBKT &none
+   &none  &kp EXCL  &kp AT    &kp HASH &kp DLLR &kp PRCNT        &kp CARET &kp AMPS   &kp STAR &kp LPAR &mt PSCRN RPAR &none
+   &none  &kp TILDE &kp GRAVE &none    &none    &kp C_AL_CALC    &trans &trans &trans &kp LBRC &kp RBRC &none
+   &none  &none     &none     &none    &kp END  &kp HOME         &trans &trans &trans &kp LBKT &kp RBKT &none
                                       &trans &trans &trans       &trans &trans &trans
                         >;
                 };
@@ -76,7 +76,7 @@
 // |      | F1  | F2  |  F3 | F4  | F5  |   | F6  | F7  |  F8 | F9  | F10 |     |
 // |      | BT1 | BT2 |     |     |     |   |     |     |     | F11 | F12 |     |
 // |      |BTCLR|     |     |     |     |   |     |     |     |     |     |     |
-//                     |     |     |    |   |     |     |     |
+//                    |     |     |     |   |     |     |     |
                         bindings = <
    &none &kp F1       &kp F2    &kp F3 &kp F4 &kp F5      &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &none
    &none &bt BT_SEL 1 &bt BT_SEL 2 &none &none &none      &none &none &none &kp F11 &kp F12 &none
