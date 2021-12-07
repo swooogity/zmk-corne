@@ -39,7 +39,7 @@
    &none &kp Q       &kp W &kp E &kp R &kp T     &kp Y &kp U  &kp I     &kp O   &kp P    &none
    &none &kp A       &kp S &kp D &kp F &kp G     &kp H &kp J  &kp K     &kp L   &mt DQT APOS  &none
    &none &mt LSHFT Z &kp X &kp C &kp V &kp B     &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &none
-   &mt RALT DEL &mt LCTRL TAB  &lt 1 SPACE   &lt 2 BSPC  &mt CAPS ENT &mt LGUI RSHFT
+   &mt RALT DEL &mt LCTRL TAB  &lt 1 SPACE   &lt 2 BSPC  &mt CAP ENT  &mt LGUI LSHFT
                         >;
                 };
                 lower_layer {
