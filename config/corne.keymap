@@ -34,12 +34,12 @@
 // |      |Q,ESC |W,ESC|  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |      |
 // |      |  A   |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  | ' " |      |
 // |      |Z,SHFT|  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  | /?  |      |
-//            |ALT/DEL|CTRL/TAB|SPC/LOWER|   |BSP/RAISE|ENT/CAPS|SHFT/GUI|
+//            |ALT/DEL|CTRL/TAB|SPC/LOWER|   |BSP/RAISE|ALT/ENT|SHFT/GUI|
                         bindings = <
    &none &kp Q       &kp W &kp E &kp R &kp T     &kp Y &kp U  &kp I     &kp O   &kp P    &none
    &none &kp A       &kp S &kp D &kp F &kp G     &kp H &kp J  &kp K     &kp L   &mt DQT APOS  &none
    &none &mt LSHFT Z &kp X &kp C &kp V &kp B     &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &none
-   &mt RALT DEL &mt LCTRL TAB  &lt 1 SPACE   &lt 2 BSPC  &mt CAP ENT  &mt LGUI LSHFT
+   &mt RALT DEL &mt LCTRL TAB  &lt 1 SPACE   &lt 2 BSPC  &mt RALT ENT  &mt LGUI LSHFT
                         >;
                 };
                 lower_layer {
@@ -47,12 +47,12 @@
 // |      |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |     |
 // |      | VUP | LFT | UP  | DWN | RGT |   |  -  |  _  |  /  |  :  |  ;  |     |  
 // |      | VDN |MUTE | RWD | PP  | NXT |   |  +  |  =  |  \  |  .  |  |  |     |  
-//                    |     |     |     |   |     |     |     |
+//                    |     |     |     |   | CAP |     |     |
                         bindings = <
    &none  &kp N1       &kp N2     &kp N3     &kp N4    &kp N5        &kp N6     &kp N7   &kp N8   &kp N9 &kp N0    &none                 
    &none  &kp C_VOL_UP &kp LEFT   &kp UP     &kp DOWN  &kp RIGHT     &kp MINUS &kp UNDER &kp FSLH &kp COLON  &kp SEMI  &none
    &none  &kp C_VOL_DN &kp C_MUTE &kp C_PREV &kp C_PP  &kp C_NEXT    &kp PLUS  &kp EQUAL &kp BSLH &trans  &kp PIPE &none
-                                            &trans &trans &trans     &trans &trans  &trans
+                                            &trans &trans &trans     &kp CAPS  trans  &trans
                         >;
                 };
 
@@ -61,7 +61,7 @@
 // |      |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  | )PSCRN|     | 
 // |      |  ~  |  `  |     |     | CALC|   |  -  |  _  |  /  |  {  |   }   |     |
 // |      |     |     |     | END | HOME|   |  +  |  =  |  \  |  [  |   ]   |     |
-//                    |     |     |     |   |     |     |     |
+//                    |     | ESC |     |   | CAP |     |     |
                         bindings = <
                         
    &none  &kp EXCL  &kp AT    &kp HASH &kp DLLR &kp PRCNT        &kp CARET &kp AMPS   &kp STAR &kp LPAR &mt PSCRN RPAR &none
